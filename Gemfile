@@ -22,6 +22,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
+  gem "mysql2", "~> 0.3.11" 
 end
 
 group :production do
