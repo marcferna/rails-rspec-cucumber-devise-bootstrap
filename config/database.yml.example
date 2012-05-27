@@ -6,6 +6,6 @@
 development:
   adapter: mysql2
   database: mistutores_development
-  username: mistutores
-  password: mysqlpass
+  username: root
+  password: 
   host: localhost
