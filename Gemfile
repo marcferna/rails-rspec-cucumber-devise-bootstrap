@@ -23,6 +23,7 @@ gem 'jquery-rails'
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem "mysql2", "~> 0.3.11" 
+  gem "cucumber-rails", "~> 1.3.0"
 end
 
 group :production do

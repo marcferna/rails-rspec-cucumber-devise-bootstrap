@@ -9,3 +9,9 @@ development:
   username: root
   password: 
   host: localhost
+test:
+  adapter: mysql2
+  database: mistutores_test
+  username: root
+  password: 
+  host: localhost
