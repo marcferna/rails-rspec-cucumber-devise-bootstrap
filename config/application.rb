@@ -43,7 +43,7 @@ module Mistutores
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :password_confirmation]
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
@@ -61,10 +61,18 @@ module Mistutores
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    
-    # Tell the generators to use RSPEC instead of Test::Unit
+
+		#Config for Heroku: force your application to not access the DB or load models when
+		#precompiling your assets
+    config.assets.initialize_on_precompile = false
+
     config.generators do |g|
+      # Tell the generators to use RSPEC instead of Test::Unit
       g.test_framework :rspec
+      # don't generate RSpec tests for views and helpers
+      g.view_specs false
+			g.helper_specs false
     end
+
   end
 end
